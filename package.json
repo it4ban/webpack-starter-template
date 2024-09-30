@@ -4,7 +4,10 @@
 	"private": true,
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "webpack"
+		"build:prod": "webpack --env mode=production",
+		"build:dev": "webpack serve --open --env mode=development",
+		"watch": "webpack --watch",
+		"server": "node server.js"
 	},
 	"keywords": [],
 	"author": "it4ban",
@@ -12,10 +15,12 @@
 	"description": "My webpack starter",
 	"packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
 	"devDependencies": {
+		"css-loader": "^7.1.2",
+		"html-webpack-plugin": "^5.6.0",
+		"style-loader": "^4.0.0",
 		"webpack": "^5.95.0",
-		"webpack-cli": "^5.1.4"
+		"webpack-cli": "^5.1.4",
+		"webpack-dev-server": "^5.1.0"
 	},
-	"dependencies": {
-		"lodash": "^4.17.21"
-	}
+	"dependencies": {}
 }
